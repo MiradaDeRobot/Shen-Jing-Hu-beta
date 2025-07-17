@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Escuela de Wushu Kung Fu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      overflow: hidden;
+    }
+    header img {
+      width: 80%;
+      max-width: 700px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+      animation: pulse 4s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); box-shadow: 0 0 25px rgba(255, 215, 0, 0.6); }
+      50% { transform: scale(1.03); box-shadow: 0 0 35px rgba(255, 215, 0, 0.9); }
+      100% { transform: scale(1); box-shadow: 0 0 25px rgba(255, 215, 0, 0.6); }
+    }
+    nav {
+      background: #222;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 2em;
+    }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1em;
+      margin-top: 1em;
+    }
+    .competidor-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+    .competidor-card:hover {
+      transform: scale(1.03);
+    }
+    .competidor-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .competidor-card a {
+      display: block;
+      margin-top: 0.5em;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+    }
+    /* GALERÍA */
+    #galeria img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    
+    #galeria img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+  </style>
+
+  
+</head>
+<body>
+
+  
+
+  <header>
+    <img src="imagenes/LOGO ESCUELA wushu.jpg" alt="Escuela Shen Jing Hu" />
+  </header>
+  <nav>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#competidores">Competidores</a>
+    <a href="#galeria">Galería</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#patrocinios">Patrocinios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+
+  <section id="sobre">
+  <h2>Sobre Nosotros</h2>
+  <p style="line-height: 1.5;">En la tradición taoísta de la vida se apoya en tres pilares principales, estos tres pilares o compuestos son importantes para llevar una vida sana y equilibrada. La traducción de estos es muy vaga y cada maestro taoísta le puede dar una respuesta ligeramente diferente. Esta traducción aquí es la versión clásica de Qi, Jing y Shen. Básicamente se pueden traducir como: Qi es edificio de energía. Jing es el ahorro de energía y Shen tiene mucho que ver con nuestro sistema nervioso y la conciencia.</p>
+  <p style="line-height: 1.5;">Los maestros taoístas utilizan el conocimiento de los tres tesoros para indicar su propia vida y ayudar a los demás mediante la indicación de sus problemas de la vida. Los tres tesoros son el principio básico para el diagnóstico en la medicina tradicional china. La interpretación real de los tres tesoros puede ser entendida mediante la recopilación de experiencia a través de la auto-conciencia. Esto incluye Qi Gong, Tai Chi y el entrenamiento de Kung Fu.</p>
+
+  <div style="background-color: #fff3cd; border-left: 6px solid #ffa500; padding: 1em; border-radius: 8px; text-align: center;">
+  <p><strong>RESUMIENDO UN POCO ESTAS TRES PALABRAS:</strong></p>
+</div>
+<div style="background-color: #e0f7fa; padding: 2em; border-radius: 12px; text-align: center; margin-top: 1em; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+  <h3 style="color: #00796b;">神 (Shén) ESPÍRITU</h3>
+  <p style="font-size: 1.1em; line-height: 1.6; color: #333; max-width: 700px; margin: 0 auto;">
+    Nuestro verdadero Espíritu, que los chinos llaman Shen, es la chispa de divinidad que reside dentro del corazón de cada ser humano y se manifiesta como amor, la bondad, la compasión, la generosidad, la entrega, la tolerancia, el perdón, la misericordia, la ternura y la apreciación de la belleza.
+  </p>
+</div>
+
+<div style="background-color: #f1f8e9; padding: 2em; border-radius: 12px; text-align: center; margin-top: 1em; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+  <h3 style="color: #33691e;">精 (Jīng) ENERGÍA</h3>
+  <p style="font-size: 1.1em; line-height: 1.6; color: #333; max-width: 700px; margin: 0 auto;">
+    Jing es el segundo tesoro y se traduce como “Esencia Regenerativa,” o simplemente como “Esencia.” Jing es la energía refinada del cuerpo. Proporciona la base para todas las actividades y se dice que es la “raíz” de nuestra vitalidad. Jing es la energía primordial de la vida.
+  </p>
+</div>
+
+<div style="background-color: #fff8e1; padding: 2em; border-radius: 12px; text-align: center; margin-top: 1em; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+  <h3 style="color: #ff6f00;">虎 (Hǔ) TIGRE</h3>
+  <p style="font-size: 1.1em; line-height: 1.6; color: #333; max-width: 700px; margin: 0 auto;">
+    En China el tigre es considerado como el rey de las montañas y los bosques, y encarna el valor, la virilidad y la majestuosidad.<br>
+    El tigre es llamado por los chinos el “Rey de las Bestias Salvajes” y sus reales o imaginarias cualidades proporcionan materia para muchas metáforas que ningún otro animal llega a tener (v. gr. Hu bu: andares de tigre: aire marcial). Él es tomado como emblema de la majestad magisterial y la severidad, como el modelo para el coraje y la fiereza, lo cual lo caracterizaría semejante a un soldado; su presencia o rugido es sinónimo de peligro y terror.
+  </p>
+</div>
+</div>
+
+    <p style="text-align: center; font-weight: bold; font-size: 1.2em; line-height: 1.5;">La conjunción armoniosa de Shen, Jing y Hu fusiona la espiritualidad elevada, la esencia regenerativa y la majestuosidad valiente. Shen, como el espíritu puro, guía la conciencia superior con amor y sabiduría. Jing, la esencia regenerativa, proporciona la base vital para la existencia, mientras que Hu, el tigre, simboliza la fuerza y el coraje. Juntos, forman una tríada equilibrada que nutre la vitalidad, eleva la espiritualidad y encarna la valentía en el viaje de la vida.</p>
+  </div>
+</section>
+
+  <section id="competidores">
+    <h2>Competidores</h2>
+    <div class="grid-container">
+      <div class="competidor-card">
+        <img src="imagenes/calderon_julieta.jpg" alt="Calderon Julieta">
+        <a href="paginas_competidores/calderon_julieta.html">Calderon Julieta</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/calderon_melissa.jpg" alt="Calderon Melissa">
+        <a href="paginas_competidores/calderon_melissa.html">Calderon Melissa</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/melina_agusto.jpg" alt="Melina Agusto">
+        <a href="paginas_competidores/melina_agusto.html">Melina Agusto</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/rosales_ezequiel.jpg" alt="Rosales Ezequiel">
+        <a href="paginas_competidores/rosales_ezequiel.html">Rosales Ezequiel</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/moyano_agustin.jpg" alt="Moyano Agustin">
+        <a href="paginas_competidores/moyano_agustin.html">Moyano Agustin</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/rosales_alexis.jpg" alt="Rosales Alexis">
+        <a href="paginas_competidores/rosales_alexis.html">Rosales Alexis</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/rosales_ludmila.jpg" alt="Rosales Ludmila">
+        <a href="paginas_competidores/rosales_ludmila.html">Rosales Ludmila</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/baez_malen.jpg" alt="Baez Malen">
+        <a href="paginas_competidores/baez_malen.html">Baez Malen</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/rolon_mateo.jpg" alt="Rolon Mateo">
+        <a href="paginas_competidores/rolon_mateo.html">Rolon Mateo</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/ibarra_kiara.jpg" alt="Ibarra Kiara">
+        <a href="paginas_competidores/ibarra_kiara.html">Ibarra Kiara</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/barrionuevo_lourdes.jpg" alt="Barrionuevo Lourdes">
+        <a href="paginas_competidores/barrionuevo_lourdes.html">Barrionuevo Lourdes</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/firmapaz_emiliano.jpg" alt="Firmapaz Emiliano">
+        <a href="paginas_competidores/firmapaz_emiliano.html">Firmapaz Emiliano</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/aguilera_alumine.jpg" alt="Aguilera Alumine">
+        <a href="paginas_competidores/aguilera_alumine.html">Aguilera Alumine</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/amarilla_naiara.jpg" alt="Amarilla Naiara">
+        <a href="paginas_competidores/amarilla_naiara.html">Amarilla Naiara</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/almiron_lujan.jpg" alt="Almirón Luján">
+        <a href="paginas_competidores/almiron_lujan.html">Almirón Luján</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/rolon_bruno.jpg" alt="Rolón Bruno">
+        <a href="paginas_competidores/rolon_bruno.html">Rolón Bruno</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/mieres_frederick.jpg" alt="Mieres Frederick">
+        <a href="paginas_competidores/mieres_frederick.html">Mieres Frederick</a>
+      </div>
+      <div class="competidor-card">
+        <img src="imagenes/farias_santiago.jpg" alt="Farias Santiago">
+        <a href="paginas_competidores/farias_santiago.html">Farias Santiago</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="galeria" style="padding: 2rem; background-color: #f0f8f0;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Galería</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+      
+      <a href="imagenes/1.jpg" target="_blank">
+        <img src="imagenes/1.jpg" alt="Wushu grupo 1" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/2.jpg" target="_blank">
+        <img src="imagenes/2.jpg" alt="Wushu grupo 2" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/3.jpg" target="_blank">
+        <img src="imagenes/3.jpg" alt="Wushu grupo 3" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/4.jpg" target="_blank">
+        <img src="imagenes/4.jpg" alt="Competencia 1" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/5.jpg" target="_blank">
+        <img src="imagenes/5.jpg" alt="Competencia 2" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/6.jpg" target="_blank">
+        <img src="imagenes/6.jpg" alt="Competencia 3" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/7.jpg" target="_blank">
+        <img src="imagenes/7.jpg" alt="Competencia 4" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/8.jpg" target="_blank">
+        <img src="imagenes/8.jpg" alt="Competencia 5" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+      <a href="imagenes/9.jpg" target="_blank">
+        <img src="imagenes/9.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+  
+
+      <a href="imagenes/10.jpg" target="_blank">
+        <img src="imagenes/10.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/11.jpg" target="_blank">
+        <img src="imagenes/11.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/12.jpg" target="_blank">
+        <img src="imagenes/12.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/13.jpg" target="_blank">
+        <img src="imagenes/13.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/14.jpg" target="_blank">
+        <img src="imagenes/14.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/15.jpg" target="_blank">
+        <img src="imagenes/15.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/16.jpg" target="_blank">
+        <img src="imagenes/16.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/17.jpg" target="_blank">
+        <img src="imagenes/17.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/18.jpg" target="_blank">
+        <img src="imagenes/18.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/19.jpg" target="_blank">
+        <img src="imagenes/19.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/20.jpg" target="_blank">
+        <img src="imagenes/20.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/21.jpg" target="_blank">
+        <img src="imagenes/21.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/22.jpg" target="_blank">
+        <img src="imagenes/22.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/23.jpg" target="_blank">
+        <img src="imagenes/23.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/24.jpg" target="_blank">
+        <img src="imagenes/24.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/25.jpg" target="_blank">
+        <img src="imagenes/25.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/26.jpg" target="_blank">
+        <img src="imagenes/26.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/27.jpg" target="_blank">
+        <img src="imagenes/27.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/28.jpg" target="_blank">
+        <img src="imagenes/28.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/29.jpg" target="_blank">
+        <img src="imagenes/29.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/30.jpg" target="_blank">
+        <img src="imagenes/30.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/31.jpg" target="_blank">
+        <img src="imagenes/31.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/32.jpg" target="_blank">
+        <img src="imagenes/32.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/33.jpeg" target="_blank">
+        <img src="imagenes/33.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/34.jpeg" target="_blank">
+        <img src="imagenes/34.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/35.jpeg" target="_blank">
+        <img src="imagenes/35.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/36.jpeg" target="_blank">
+        <img src="imagenes/36.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/37.jpeg" target="_blank">
+        <img src="imagenes/37.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/38.jpeg" target="_blank">
+        <img src="imagenes/38.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+
+      <a href="imagenes/39.jpeg" target="_blank">
+        <img src="imagenes/39.jpeg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/40.jpg" target="_blank">
+        <img src="imagenes/40.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/41.jpg" target="_blank">
+        <img src="imagenes/41.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/42.jpg" target="_blank">
+        <img src="imagenes/42.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/43.jpg" target="_blank">
+        <img src="imagenes/43.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/44.jpg" target="_blank">
+        <img src="imagenes/44.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/45.jpg" target="_blank">
+        <img src="imagenes/45.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      <a href="imagenes/46.jpg" target="_blank">
+        <img src="imagenes/46.jpg" alt="Competencia 6" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+
+      
+      
+    </div>
+  </section>
+  
+  
+
+  <section id="eventos">
+    <h2>Eventos</h2>
+    <ul>
+    
+      <a href="imagenes/evento1.jpg" target="_blank" >
+        <img src="imagenes/evento1.jpg" alt="Competencia 6" style="width: 30%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.3);">
+      </a>
+      
+
+
+    </ul>
+  </section>
+
+  <section id="patrocinios">
+  
+
+    <div style="background-color: #e1ffef; padding: 2em; border-radius: 12px; text-align: center; margin-top: 1em; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+  <h3 style="color: #ff6f00;">  PATROCINIOS</h3>
+  <p style="font-size: 1.1em; line-height: 1.6; color: #333; max-width: 700px; margin: 0 auto;">
+     
+Tu apoyo al futuro del Wushu Argentino puede marcar la diferencia.
+Nuestros atletas entrenan con pasión, disciplina y perseverancia para representar a nuestra escuela y al país en competencias nacionales e internacionales.
+
+Con tu patrocinio, estarás invirtiendo en jóvenes comprometidos con el arte del Wushu, promoviendo valores como el respeto, la superación personal y el espíritu deportivo.
+
+Sumate a esta energía.
+Ayudanos a cubrir los costos de viajes, indumentaria, equipamiento y entrenamiento.
+Juntos podemos llevar a nuestros competidores más lejos, más alto, más fuerte.
+
+
+  </p><br>
+<center><h4>CONVERTITE EN PARTE DE NUESTRA HISTORIA</h4></center>
+</div>
+   
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: contacto@escuelawushu.com</p>
+    <p>Teléfono: (123) 456-7890</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Escuela Shen-Jing-Hu. Todos los derechos reservados.</p>
+  </footer>
+
+
+
+
+
+
+
+  
+<audio id="fondoAudio" loop>
+    <source src="kungfu.mp3" type="audio/mpeg">
+    Tu navegador no soporta el audio HTML5.
+  </audio>
+
+  <script>
+  const logo = document.querySelector("header img");
+  const audio = document.getElementById("fondoAudio");
+
+  logo.style.cursor = "pointer";
+  logo.title = "Hacé clic en el logo para activar la música";
+
+  logo.addEventListener("click", function reproducirAudio() {
+    audio.play();
+    logo.removeEventListener("click", reproducirAudio); // evita múltiples clics
+  });
+</script>
+
+</body>
+</html>
